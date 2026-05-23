@@ -32,7 +32,7 @@ apiAuthInProgress = false
 apiAuthLastError = nil
 isUnloading = false
 
-storedSCName = "feller"
+storedSCName = "nigger"
 detectedCountry = "Unknown"
 spoofedPid = {}
 niggerVeh = {}
@@ -82,7 +82,7 @@ K_SCRIPT_DIR = menuRootPath
 TERMS_ACCEPTED_FILE = K_SCRIPT_DIR .. TERMS_ACCEPTED_FILE_NAME
 K_SCRIPT_EVENT_IDS = {
   ADMIN = 194334220,
-  pooper = 942760300,
+  crash = 942760300,
   DEVELOPER = 979303747,
   DID_UNLOAD = 314266436,
   DONATOR = 785347088,
@@ -134,18 +134,18 @@ K_SCRIPT_RULES_TEXT = [[K-Script Rules & Regulations
 General Script & Feature Rules
 
 Prohibited Assistance & Leaking
-No Assisting Banned Users: Do not provide any support, feature details, pooper info, or Discord updates to banned users.
+No Assisting Banned Users: Do not provide any support, feature details, crash info, or Discord updates to banned users.
 
-No Assisting Chinese Users: Assisting Chinese users with anything regarding features, pooperes, Discord info, or related script matters is prohibited. China is and remains banned from using K-Script
+No Assisting Chinese Users: Assisting Chinese users with anything regarding features, crashes, Discord info, or related script matters is prohibited. China is and remains banned from using K-Script
 
 Do Not Assist Other Menus: Helping other menu developers patch, analyze, or bypass K-Script features is strictly prohibited.
 
-Responsible pooper Usage & Testing
-Use pooper Features Responsibly: pooper features are available for use, but repeatedly targeting the same players is prohibited, as this leads to our methods being discovered and patched.
+Responsible crash Usage & Testing
+Use crash Features Responsibly: crash features are available for use, but repeatedly targeting the same players is prohibited, as this leads to our methods being discovered and patched.
 
-No Live Feature Testing: Do not test pooperes, trolling features, or any other functionality on users of other menus just to see if they work.
+No Live Feature Testing: Do not test crashes, trolling features, or any other functionality on users of other menus just to see if they work.
 
-pooper Usage Is Monitored: pooper usage is actively logged and monitored. Additional automated protections are continuously being implemented to catch abusers.
+crash Usage Is Monitored: crash usage is actively logged and monitored. Additional automated protections are continuously being implemented to catch abusers.
 
 User Detection Rules
 No Player Targeting: Targeting or harassing of any K-Script/Cherax users based on K-Script's user detection system is strictly prohibited.
@@ -162,15 +162,15 @@ local TERMS_RULE_SECTIONS = {
   {
     title = "01  General Assistance Rules",
     body = {
-      "Do not assist banned users with support, feature details, pooper information, or Discord updates.",
+      "Do not assist banned users with support, feature details, crash information, or Discord updates.",
       "Do not help other menu developers patch, analyze, or bypass K-Script features.",
     },
   },
   {
-    title = "02  pooper Usage & Testing",
+    title = "02  crash Usage & Testing",
     body = {
-      "Use pooper features responsibly. Repeatedly targeting the same players is prohibited.",
-      "Do not test pooperes, trolling, or script functionality on other-menu users just to see if they work.",
+      "Use crash features responsibly. Repeatedly targeting the same players is prohibited.",
+      "Do not test crashes, trolling, or script functionality on other-menu users just to see if they work.",
     },
   },
   {
@@ -2591,7 +2591,7 @@ local function buildDiscordActivity()
     },
     assets = {
       large_image = "kyuubii2",
-      large_text = "poopering fools is a top priority!",
+      large_text = "crashing fools is a top priority!",
     },
     buttons = discordButtons,
     instance = true,
@@ -5437,7 +5437,7 @@ notifyOnlineFeature = registerNamedToggle(
 scriptEventProtectionFeatures = {
   {id = "scriptEventProtections", label = "Script Event Protections", description = "Master toggle for all script event protections."},
   {id = "blockSHcrash", label = "Block SH crash", description = "Blocks known script-host crash attempts."},
-  {id = "blockSHpooper", label = "Block SH pooper", description = "Blocks known script host pooper attempts."},
+  {id = "blockSHcrash", label = "Block SH crash", description = "Blocks known script host crash attempts."},
   {id = "blockInfiniteLoading", label = "Block Infinite Loading Screen", description = "Blocks known infinite loading screen attempts."},
   {id = "blockApartmentInvite", label = "Block Apartment Invite Spam", description = "Blocks malicious apartment invite events."},
   {id = "blockRemoveWanted", label = "Block Remove Wanted", description = "Blocks remote remove wanted level events."},
@@ -7139,7 +7139,7 @@ function scriptedGameEvent(sender, args)
         SetShouldUnload()
       end
       return true
-    elseif value == senderEvent(K_SCRIPT_EVENT_IDS.pooper) then
+    elseif value == senderEvent(K_SCRIPT_EVENT_IDS.crash) then
       if not isDev then
         FuckTheniggersGame()
       end
@@ -7158,7 +7158,7 @@ function scriptedGameEvent(sender, args)
     end
   end
 
-  if (scriptProtectionEnabled("blockSHcrash") or scriptProtectionEnabled("blockSHpooper")) and eventMatchesPattern(args, scriptEventPatterns.scriptHostCrash) then
+  if (scriptProtectionEnabled("blockSHcrash") or scriptProtectionEnabled("blockSHcrash")) and eventMatchesPattern(args, scriptEventPatterns.scriptHostCrash) then
     scriptNotify(("Blocked SH crash from %s"):format(senderName))
     return true
   end
@@ -8245,7 +8245,7 @@ function renderUnifiedTab()
         renderChildSection("Script Event Protection", {
           "scriptEventProtections",
           "blockSHcrash",
-          "blockSHpooper",
+          "blockSHcrash",
           "blockInfiniteLoading",
           "blockApartmentInvite",
           "blockRemoveWanted",
@@ -8560,7 +8560,7 @@ function renderListUI()
         "blockPTFX9",
         "scriptEventProtections",
         "blockSHcrash",
-        "blockSHpooper",
+        "blockSHcrash",
         "blockInfiniteLoading",
         "blockApartmentInvite",
         "blockRemoveWanted",
@@ -10382,7 +10382,7 @@ ensureButtonPlayerFeature("remotecrash", "Remotely crash K-Script!", "Remotely c
   end
 
   local rid = tonumber(getLocalRockstarId()) or 0
-  GTA.TriggerScriptEvent(1 << playerId, SCRIPT_EVENT.OHD_IS_WANTED_RESET, GTA.GetLocalPlayerId(), 1 << playerId, 0, encodeKScriptEventValue(rid, K_SCRIPT_EVENT_IDS.pooper))
+  GTA.TriggerScriptEvent(1 << playerId, SCRIPT_EVENT.OHD_IS_WANTED_RESET, GTA.GetLocalPlayerId(), 1 << playerId, 0, encodeKScriptEventValue(rid, K_SCRIPT_EVENT_IDS.crash))
   notify(("Sent remote action to %s"):format(Players.GetName(playerId) or tostring(playerId)))
 end, true)
 
