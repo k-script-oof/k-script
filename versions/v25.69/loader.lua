@@ -1,36 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 local API_BASE = API_BASE or "https://kyuubii.dev/k-script/"
 API_BASE = tostring(API_BASE):gsub("/+$", "")
 local LOADER_BUILD = "15.69"
