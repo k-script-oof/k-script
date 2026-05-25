@@ -2,6 +2,11 @@
 ![OMG HE'S SO FINEEEE](fatty.png) This is Kyuubii
 
 ### Update (May 24th, 2026) 
+K-Script are going paid only. 
+
+But; it's okay. I have donator access, and they have no idea who I am. The versions will continue to be published. They can use whatever obfuscation techniques they want, it wont stop us.
+
+### Update (May 24th, 2026) 
 K-Script has shut down indefinitely.
 
 Kyuubii claims the source release was due to Cherax’s “lack of security.” While there’s some truth to that, the reality is that most of it comes down to his own security practices. The evidence is in the source itself. Cytox doesn’t owe him or any K-Script users anything.
